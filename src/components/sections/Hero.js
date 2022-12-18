@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
-// import ButtonGroup from '../elements/ButtonGroup';
-// import Button from '../elements/Button';
+import ButtonGroup from '../elements/ButtonGroup';
+import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 
@@ -57,7 +57,7 @@ const Hero = ({
       {...props}
       className={outerClasses}
     >
-      <div className="container-sm">
+      <div className="container">
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
@@ -67,16 +67,16 @@ const Hero = ({
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               </p>
-              {/* <div className="reveal-from-bottom" data-reveal-delay="600">
+              <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="">
+                  <Button {...{as: 'a', className:"button button-primary button-wide-mobile" }} href="" >
                     Get started
-                    </Button>
-                  <Button tag="a" color="dark" wideMobile href="">
+                  </Button>
+                  <Button {...{as: 'a', className:"button button-dark button-wide-mobile" }} href="" >
                     View on Github
-                    </Button>
+                  </Button>
                 </ButtonGroup>
-              </div> */}
+              </div>
             </div>
           </div>
           <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
@@ -97,8 +97,8 @@ const Hero = ({
                 className="has-shadow"
                 src={require('./../../assets/images/video-placeholder-renameed.jpg')}
                 alt="Hero"
-                width={896}
-                height={504} 
+                width={1300}
+                height={1000} 
               />
             </a>
           </div>

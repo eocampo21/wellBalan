@@ -15,7 +15,6 @@ const defaultProps = {
 }
 
 const FormLabel = ({
-  className,
   children,
   labelHidden,
   id,
@@ -25,7 +24,6 @@ const FormLabel = ({
   const classes = classNames(
     'form-label',
     labelHidden && 'screen-reader',
-    className
   );
 
   return (
