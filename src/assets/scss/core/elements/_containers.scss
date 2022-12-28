@@ -13,15 +13,15 @@
 }
 
 .container {
-	max-width: $container--width + ( $container--padding__desktop * 2 );
+	max-width: $container--width + ( $container--padding__desktop * 8 );
 }
 
 .container-sm {
-	max-width: $container--width-sm + ( $container--padding__desktop * 2 );
+	max-width: $container--width-sm + ( $container--padding__desktop * 8 );
 }
 
 .container-xs {
-	max-width: $container--width-xs + ( $container--padding__desktop * 2 );
+	max-width: $container--width-xs + ( $container--padding__desktop * 8 );
 }
 
 [class*=container] {
