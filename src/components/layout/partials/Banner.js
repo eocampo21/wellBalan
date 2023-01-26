@@ -12,11 +12,11 @@ const Banner = ({
         <div {...props} className="banner">
           <div className="banner-inner text-xxs">
             <div className='banner-container'>
-              <a className="banner-link banner-link-white" href="" target="_blank" rel="noopener noreferrer">
+              <a className="banner-link banner-link-white" href="githubLink" target="_blank" rel="noopener noreferrer">
                 Download<span className="banner-hide-on-sm"> on GitHub</span>
               </a>
               <span className="banner-separator">or</span> 
-              <a className="banner-link banner-link-green" href="" target="_blank" rel="noopener noreferrer">Check Premium Version</a>
+              <a className="banner-link banner-link-green" href="premium" target="_blank" rel="noopener noreferrer">Check Premium Version</a>
             </div>
             <button className="banner-close" onClick={() => setBannerOpen(false)}>
               <span className="screen-reader">Close</span>
