@@ -1,5 +1,4 @@
 {
-  "homepage": "https://github.com/build",
   "name": "well-balance",
   "version": "0.1.0",
   "private": false,
@@ -28,9 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
