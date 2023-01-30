@@ -6,10 +6,6 @@
 	margin-left: -($tiles-items--padding__mobile * 0.5);
 	margin-top: -($tiles-items--padding__mobile * 0.5);
 
-	&:last-of-type {
-		margin-bottom: -($tiles-items--padding__mobile * 0.5);
-	}
-
 	&:not(:last-of-type) {
 		margin-bottom: ($tiles-items--padding__mobile * 0.5);
 	}
@@ -26,35 +22,73 @@
 			height: 0;
 		}
 	}
-}
 
-.tiles-item {
-	flex-basis: $tiles-item--width;
-	max-width: $tiles-item--width;
-	box-sizing: content-box;
-	padding: $tiles-items--padding__mobile * 0.5;
+	.tiles-item {
+		flex-basis: $tiles-item--width;
+		max-width: $tiles-item--width;
+		box-sizing: content-box;
+		padding: $tiles-items--padding__mobile * 0.5;
 
-	* {
-		box-sizing: border-box;
+		height: 410px;
+		@if ( $testimonial-items--padding__mobile != null ) {
+			padding: $testimonial-items--padding__mobile * 0.5;
+		}
+	
+		* {
+			box-sizing: border-box;
+		}
+
+		.tiles-item-inner {
+			height: 100%;
+			text-align: center;
+		}
 	}
-}
 
-.tiles-item-inner {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	height: 100%;
-	padding: $tiles-item--inner-padding-v $tiles-item--inner-padding-h;
+	.title-front {
+		align-items: center;
+		img {
+			overflow: hidden;
+			width: 200px;
+			height: 200px;
+			background-size: 100%;
+			border-radius: 50%;
+		}
+	}
+
+	.title-back {
+		.testimonial-item-content {
+			flex-grow: 1;
+			flex-direction: column;
+			justify-content: space-evenly;
+			text-align: center;
+			align-items: center;
+			color: #f8fafcad;
+			display: flex;
+
+
+			&::before {
+				content: "";
+				left: 20px;
+				top: 30px;
+				width: 24px;
+				position: absolute;
+				height: 18px;
+				background-image: inline-svg('<svg width="24" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M0 13.481c0-2.34.611-4.761 1.833-7.263C3.056 3.716 4.733 1.643 6.865 0L11 2.689C9.726 4.382 8.777 6.093 8.152 7.824c-.624 1.73-.936 3.578-.936 5.545V18H0v-4.519zm13 0c0-2.34.611-4.761 1.833-7.263 1.223-2.502 2.9-4.575 5.032-6.218L24 2.689c-1.274 1.693-2.223 3.404-2.848 5.135-.624 1.73-.936 3.578-.936 5.545V18H13v-4.519z" fill="' + get-color(primary, 1) + '" fill-rule="nonzero"/></svg>');
+				
+			}	
+		}
+	}
 }
 
 @if ( $tiles-items--padding__desktop != null ) {
 
-	@include media( '>medium' ) {
+	@include media( '=<medium' ) {
 
 		.tiles-wrap {
 			margin-right: -($tiles-items--padding__desktop * 0.5);
 			margin-left: -($tiles-items--padding__desktop * 0.5);
 			margin-top: -($tiles-items--padding__desktop * 0.5);
+			height: 900px;
 
 			&:last-of-type {
 				margin-bottom: -($tiles-items--padding__desktop * 0.5);

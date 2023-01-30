@@ -63,7 +63,8 @@ const Testimonial = ({
                 itemName: 'Roman Level',
                 role:'- CEO',
                 companyOwn: 'WIP LLC',
-                revealFrom: 'reveal-from-bottom'
+                revealFrom: 'reveal-from-bottom',
+                urlPhoto: 'https://faces-img.xcdn.link/thumb-lorem-face-6040_thumb.jpg',
               }}
             />
             <TestimonialItem {...{
@@ -71,7 +72,8 @@ const Testimonial = ({
                 itemName: 'Juaansito',
                 role:'- Principle Engineering',
                 companyOwn: 'ThinkingAboutYet',
-                revealFrom: 'reveal-from-right'
+                revealFrom: 'reveal-from-right',
+                urlPhoto: 'https://faces-img.xcdn.link/image-lorem-face-4374.jpg',
               }}
             />
             <TestimonialItem {...{
@@ -79,7 +81,8 @@ const Testimonial = ({
                 itemName: 'Hernesto',
                 role:'- Angular Subject Matter',
                 companyOwn: 'Freelancer',
-                revealFrom: 'reveal-from-left'
+                revealFrom: 'reveal-from-left',
+                urlPhoto: 'https://faces-img.xcdn.link/thumb-lorem-face-6034_thumb.jpg',
               }}
             />
           </div>

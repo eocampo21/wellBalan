@@ -39,7 +39,7 @@ const ClientsSection: React.FC<FormHintProps> = ({
   return (
     <section
       {...props}
-      className="touchable-carousel section"
+      className="our-clients-section"
     >
       <Component className="container center-content">
         <div className="section-inner has-top-divider">

@@ -53,7 +53,7 @@ const Cta = ({
         >
           <div className="cta-slogan">
             <h3 className="m-0">
-              This a text of a global newsletter
+              Text for a newsletter
             </h3>
           </div>
           <div className="cta-action">

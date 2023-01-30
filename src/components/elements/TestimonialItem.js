@@ -7,6 +7,7 @@ const propTypes = {
   companyOwn: PropTypes.string,
   revealFrom: PropTypes.string,
   role: PropTypes.string,
+  urlPhoto: PropTypes.string,
 }
 
 const defaultProps = {
@@ -15,6 +16,7 @@ const defaultProps = {
   companyOwn: '',
   revealFrom: 'reveal-from-right',
   role:'',
+  urlPhoto: '',
 }
 
 const TestimonialItem = ({
@@ -23,26 +25,39 @@ const TestimonialItem = ({
   companyOwn,
   revealFrom,
   role,
+  urlPhoto,
   ...props
 }) => {
-  const testimonialItemClass = `tiles-item ${revealFrom}`;
+  const withFlipCard = !!urlPhoto;
+
+  const testimonialClass = {
+    'testimonialItem': `tiles-item ${revealFrom} ${withFlipCard ? `flip-card` : ``}`,
+    'tilesItemInner': `tiles-item-inner ${withFlipCard ? `flip-card-inner` : ``}`,
+  }
 
   return (
-    <div  {...props} className={testimonialItemClass} data-reveal-delay="200">
-      <div className="tiles-item-inner">
-        <div className="testimonial-item-content"> 
-          {
-            text && <p className="text-sm mb-0">
-              {text}
-            </p>
-          } 
+    <div  {...props} className={testimonialClass.testimonialItem} data-reveal-delay="200">
+      <div className={testimonialClass.tilesItemInner}>
+        <div class="title title-front flip-card-front">
+          <div className="testimonial-item-content">
+            <img src={urlPhoto}></img>
+          </div>
+          <div className="testimonial-item-footer text-xs has-top-divider">
+            {itemName && <span className="testimonial-item-name text-color-high">{itemName}</span>}
+            {companyOwn && itemName && <span className="text-color-high"> {role} @ </span>}
+            {companyOwn && <span className="testimonial-item-link">
+              <a href="#0">{companyOwn}</a>
+            </span>}
+          </div>
         </div>
-        <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-          {itemName && <span className="testimonial-item-name text-color-high">{itemName}</span>}
-          {companyOwn && itemName && <span className="text-color-low"> {role} @ </span>}
-          {companyOwn && <span className="testimonial-item-link">
-            <a href="#0">{companyOwn}</a>
-          </span>}
+        <div class="title title-back flip-card-back">
+          <div className="testimonial-item-content"> 
+            {
+              text && <p className="text-sm">
+                {text}
+              </p>
+            } 
+          </div>
         </div>
       </div>
     </div>
